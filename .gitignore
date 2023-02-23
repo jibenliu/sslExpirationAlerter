@@ -1,0 +1,6 @@
+.idea
+.vscode
+vendor
+config
+hosts.txt
+bot.json
