@@ -69,8 +69,11 @@ func main() {
 			return
 		}
 		client = http.Client{
-			Timeout:   time.Second * 10,
-			Transport: &http.Transport{Proxy: http.ProxyURL(proxy)},
+			Timeout: time.Second * 10,
+			Transport: &http.Transport{
+				TLSClientConfig: &tls.Config{InsecureSkipVerify: false},
+				Proxy:           http.ProxyURL(proxy),
+			},
 		}
 	} else {
 		client = http.Client{

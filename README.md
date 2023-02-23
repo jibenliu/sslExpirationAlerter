@@ -10,5 +10,5 @@ go generate
 
 # 运行
 ```shell
-go run main.go
+go run main.go -proxy http://127.0.0.1:1087
 ```
