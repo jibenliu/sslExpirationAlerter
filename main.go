@@ -39,7 +39,7 @@ func main() {
 			telegramMsg += host + " 获取证书过期时间失败\n"
 			continue
 		}
-		telegramMsg += host + " 日期:" + t.Format(dateFormat)
+		telegramMsg += host + " " + t.Format(dateFormat)
 		if t.Before(time.Now()) {
 			telegramMsg += "️❌"
 		} else if t.Before(time.Now().Add(15 * time.Minute * 60 * 24)) {
